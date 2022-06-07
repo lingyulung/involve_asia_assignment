@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Involve Asia Assignemnt</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer type="module" src="/main.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="createRevenue">
+        <form class="form">
+          <p class="createRevenueHeading">Create Revenue Group</p>
+
+          <label class="groupNameText">Group Name</label>
+
+          <input
+            type="text"
+            class="groupName"
+            id="groupName"
+            placeholder="Name"
+          />
+
+          <label class="groupDescText">Group Description</label>
+
+          <div class="groupDescContainer">
+            <textarea
+              class="groupDesc"
+              id="groupDesc"
+              placeholder="Add Description"
+              maxlength="200"
+            ></textarea>
+
+            <div class="charCount">
+              <p class="currentCharCount">0</p>
+              <p class="maxCharCount">/200</p>
+            </div>
+          </div>
+
+          <div class="specialGroupContainer">
+            <input type="checkbox" class="specialGroup" id="specialGroup" />
+
+            <label class="specialGroupText">Special Group</label>
+          </div>
+
+          <div class="rulesHeader">
+            <p class="rulesHeading">Rules</p>
+
+            <div class="add">
+              <img class="addPlus" src="images/add.svg" />
+              <p class="addText">Add</p>
+            </div>
+          </div>
+
+          <div class="rulesContainer">
+            <div class="ruleEntry" data-id="1">
+              <div class="ruleEntryHeader">
+                <p class="ruleNum">Rule 1</p>
+                <img class="ruleDelete" src="images/Iconsdelete.svg" />
+              </div>
+
+              <div class="ruleInputs">
+                <label class="ruleIf">If</label>
+
+                <select class="selectField" id="field1">
+                  <option value="">Select field</option>
+                  <option value="afff_sub_1">afff_sub_1</option>
+                  <option value="afff_sub_2">afff_sub_2</option>
+                  <option value="afff_sub_3">afff_sub_3</option>
+                  <option value="afff_sub_4">afff_sub_4</option>
+                  <option value="afff_sub_5">afff_sub_5</option>
+                  <option value="afff_sub_6">afff_sub_6</option>
+                  <option value="afff_sub_7">afff_sub_7</option>
+                  <option value="afff_sub_8">afff_sub_8</option>
+                  <option value="afff_sub_9">afff_sub_9</option>
+                </select>
+
+                <select class="selectOperator" id="operator1">
+                  <option value="">Select operator</option>
+                  <option value="is not">is not</option>
+                  <option value="is">is</option>
+                  <option value="starts with">starts with</option>
+                  <option value="ends with">ends with</option>
+                  <option value="contains">contains</option>
+                  <option value="doesn't contains">doesn't contains</option>
+                  <option value="ends with">ends with</option>
+                  <option value="doesn't end with">doesn't end with</option>
+                  <option value="start with">start with</option>
+                  <option value="doesn't start with">doesn't start with</option>
+                </select>
+                <div class="rulePara">
+                  <div class="paraEntry">
+                    <input
+                      type="text"
+                      class="selectPara parameters1"
+                      placeholder="Select Parameter"
+                    />
+                    <img
+                      class="parameterAdd"
+                      data-id="1"
+                      src="images/add_circle_outline.svg"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="ruleRevenueContainer">
+                <label class="ruleRevenueText">then revenue is</label>
+
+                <div class="ruleRevenueField">
+                  <p class="percent">%</p>
+                  <input
+                    class="ruleAmount"
+                    id="rev1"
+                    type="text"
+                    placeholder="Enter amount"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="resetAndSubmit">
+            <input type="reset" class="reset" value="Reset" />
+            <input type="submit" class="submit" value="Submit" />
+          </div>
+        </form>
+      </div>
+
+      <div class="browseRevenueContainer">
+        <p class="browseRevenueText">Browse Revenue Groups</p>
+
+        <div class="browseRevenueEntries"></div>
+      </div>
+    </div>
+  </body>
+</html>

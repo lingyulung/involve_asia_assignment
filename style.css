@@ -1,0 +1,392 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --border-radius: 0.5em;
+  --border-radius-field: 0.3em;
+  --color-primary: #3859fb;
+  --color-secondary: #ebeefe;
+  --color-white: #fff;
+  --color-row: #f4f7ff;
+  --color-light-gray-bg: #f3f3f3;
+  --color-gray-line: #bcbcbc;
+  --color-black: #1f1f1f;
+  --color-gray-text: #626262;
+  --color-gray-trash-bg: #dfdfdf;
+  --color-gray-trash-icon: #9d9d9d;
+}
+
+body {
+  color: var(--color-black);
+}
+
+.container {
+  width: 80vw;
+  margin: 2rem auto 2rem auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.createRevenue {
+  width: 40%;
+  border: 1px solid var(--color-gray-line);
+  border-radius: var(--border-radius);
+}
+
+.form {
+  padding: 1rem;
+}
+
+img {
+  cursor: pointer;
+}
+
+input {
+  border-radius: var(--border-radius-field);
+}
+
+.createRevenueHeading {
+  font-size: 23px;
+  margin-bottom: 1.5rem;
+}
+
+.groupNameText {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.groupName {
+  width: 100%;
+  padding: 0.5rem 0.7rem;
+  border-width: 1px;
+  margin-bottom: 0.8rem;
+}
+
+.groupDescText {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.groupDescContainer {
+  position: relative;
+  margin-bottom: 0.8rem;
+}
+
+.groupDesc {
+  width: 100%;
+  height: 4rem;
+  padding: 0.5rem 0.7rem;
+  border-radius: var(--border-radius-field);
+  border-width: 1px;
+  resize: none;
+}
+
+.charCount {
+  position: absolute;
+  bottom: 0.2rem;
+  right: 0.3rem;
+}
+
+.currentCharCount {
+  display: inline;
+}
+
+.maxCharCount {
+  display: inline;
+}
+
+.specialGroupContainer {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.specialGroup {
+  margin-right: 0.2rem;
+}
+
+.specialGroupText {
+  font-weight: bold;
+}
+
+.rulesHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.rulesHeading {
+  font-size: 23px;
+}
+
+.add {
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0.3rem;
+  background-color: var(--color-secondary);
+  cursor: pointer;
+}
+
+.addText {
+  display: inline;
+  color: var(--color-primary);
+}
+
+.rulesContainer {
+  margin-bottom: 2rem;
+  max-height: 10rem;
+  overflow-y: auto;
+}
+
+.ruleEntry {
+  width: 100%;
+  border: 3px dashed var(--color-gray-line);
+  border-radius: 5px;
+  padding: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+.ruleEntryHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.ruleNum {
+  display: inline;
+}
+
+.ruleDelete {
+  cursor: pointer;
+}
+
+.ruleInputs {
+  padding: 0.3rem;
+  border-radius: 5px;
+  background-color: var(--color-light-gray-bg);
+  margin-bottom: 1rem;
+  display: grid;
+  grid-template-columns: 5% 25% 25% 40%;
+  column-gap: 0.3rem;
+}
+
+.ruleIf {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.selectField {
+  border-radius: var(--border-radius-field);
+  border-width: 1px;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  height: 2rem;
+}
+
+.selectOperator {
+  border-radius: var(--border-radius-field);
+  border-width: 1px;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  height: 2rem;
+}
+
+.rulePara {
+  grid-column-start: 4;
+  grid-column-end: 5;
+}
+
+.paraEntry {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.3rem;
+}
+
+.selectPara {
+  width: 80%;
+  height: 2rem;
+  display: inline;
+  border-width: 1px;
+  padding: 0.3rem;
+}
+
+.parameterAdd {
+  cursor: pointer;
+}
+
+.ruleRevenueContainer {
+  display: flex;
+  align-items: center;
+}
+
+.ruleRevenueText {
+  margin-right: 0.5rem;
+}
+
+.ruleRevenueField {
+  width: 33%;
+  padding: 0.5rem;
+  border: 1px solid var(--color-gray-line);
+  border-radius: var(--border-radius-field);
+}
+
+.percent {
+  display: inline;
+}
+
+.ruleAmount {
+  border: 0;
+  width: 70%;
+}
+
+.ruleAmount:focus {
+  outline: none;
+}
+
+.resetAndSubmit {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.reset {
+  padding: 0.8rem;
+  border: 1px solid var(--color-gray-line);
+  border-radius: 5px;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+.submit {
+  padding: 0.8rem;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-radius: 5px;
+  border-width: 1px;
+  margin-right: 0.5rem;
+  border-color: var(--color-primary);
+  cursor: pointer;
+}
+
+.browseRevenueContainer {
+  width: 50%;
+}
+
+.browseRevenueText {
+  font-size: 23px;
+  margin-bottom: 2rem;
+}
+
+.browseRevenueEntries {
+  overflow: auto;
+  width: 100%;
+  max-height: 32rem;
+}
+
+.browseEntry {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.browseEntryTop {
+  padding: 1rem;
+  border: 1px solid var(--color-gray-line);
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+}
+
+.browseHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.browseGroupName {
+  font-size: 18px;
+  font-weight: lighter;
+  display: inline;
+}
+
+.browseSpecial {
+  padding: 0.2rem 0.5rem;
+  border-radius: 20px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  display: inline;
+  font-size: 13px;
+}
+
+.browseDesc {
+  width: 70%;
+}
+
+.browseEntryBottom {
+  width: 100%;
+  max-height: 15rem;
+  border: 1px solid var(--color-gray-line);
+  border-bottom-left-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+  overflow: auto;
+}
+
+.browseTable {
+  min-width: 100%;
+  border-collapse: collapse;
+  white-space: nowrap;
+}
+
+.browseTable th,
+.browseTable td {
+  padding: 0.5rem 1.3rem 0.5rem 0.5rem;
+  border-bottom: 1px solid var(--color-gray-line);
+  text-align: left;
+}
+
+.browseTable th {
+  color: var(--color-gray-text);
+}
+
+.altTableRow {
+  background-color: var(--color-secondary);
+}
+
+@media only screen and (min-width: 280px) and (max-width: 820px) {
+  .container {
+    flex-direction: column;
+    width: 90vw;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .createRevenue {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .browseRevenueContainer {
+    width: 100%;
+  }
+
+  .browseRevenueEntries {
+    max-height: 20rem;
+  }
+}
